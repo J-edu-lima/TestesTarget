@@ -37,7 +37,6 @@ public class TerceiroTeste {
 		for (Entry<Integer, Double> entry : vendasPorDia.entrySet()) {
 			if (entry.getValue() > maiorFaturamento) {
 				maiorFaturamento = entry.getValue();
-
 			}
 		}
 		return maiorFaturamento;
@@ -49,7 +48,6 @@ public class TerceiroTeste {
 		for (Entry<Integer, Double> entry : vendasPorDia.entrySet()) {
 			if (entry.getValue() < menorFaturamento) {
 				menorFaturamento = entry.getValue();
-
 			}
 		}
 		return menorFaturamento;
@@ -59,13 +57,14 @@ public class TerceiroTeste {
 
 		double faturamentoTotal = 0.0;
 		int dias = 0;
+
 		for (Entry<Integer, Double> entry : vendasPorDia.entrySet()) {
 			faturamentoTotal += entry.getValue();
 			dias++;
 		}
-
 		double mediaMensal = faturamentoTotal / dias;
 		int diasAcimaDaMedia = 0;
+
 		for (Entry<Integer, Double> entry : vendasPorDia.entrySet()) {
 			if (entry.getValue() > mediaMensal) {
 				diasAcimaDaMedia++;
